@@ -5,14 +5,14 @@ class Test3{
 {
     Scanner scanner = new Scanner(System.in);
 
-    System.out.print("Enter number of terms");   
+    System.out.print("Enter number of terms:");   
     double X=scanner.nextInt();
     int I=1;
     int Sum=0;
     int N=0;
     while (I<(X+1))
     {
-        System.out.print("Enter"+(I)+"term");  
+        System.out.print("Enter "+(I)+" term");  
         N=scanner.nextInt();
         Sum = (Sum+N);
         I++;
