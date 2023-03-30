@@ -20,5 +20,5 @@ class Test3{
     System.out.println("Average="+(Sum/(X*1.0)));
     scanner.close();
 
-}
+    }
 }
