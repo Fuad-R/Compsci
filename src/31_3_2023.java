@@ -5,7 +5,6 @@ class Test4{
 {
     Scanner scanner = new Scanner(System.in);
 
-
     System.out.print("Enter number of terms:");   
     int X=scanner.nextInt();
     int I=1;
