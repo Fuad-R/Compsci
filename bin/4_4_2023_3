@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+class Test11{
+    public static void main(String[]arg)
+{
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.print("Enter number of products bought: ");
+
+    int products = scanner.nextInt();
+    double discount = 0
+    double final = 0
+
+    if (product < 50){
+
+        final = product * 100
+
+    }
+    if else ((product - 50) < 10) {
+    final = product * 100 * 0.9
+    }
+    if else ((product - 50) < 20) {
+    final = product * 100 * 0.89 
+    }
+    if else ((product - 50) < 30) {
+    final = product * 100 * 0.88
+    }
+    if else ((product - 50) < 40) {
+    final = product * 100 * 0.87 
+    }
+    if else ((product - 50) < 50) {
+    final = product * 100 * 0.86
+    }
+    else {
+    final = product * 100 * 0.85 
+    }
+    system.out.println("Final pice is: "+final)
+
+    scanner.close();
+}
+
+}
