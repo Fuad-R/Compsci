@@ -21,7 +21,7 @@ class Test10{
             System.out.println("Student can not take the exam because he missed "+percent+"% of classes");
         }
         else{
-            System.out.println("Student can take the exam because he attended "+percent+"% of classes");
+            System.out.println("Student can take the exam because he only missed "+percent+"% of classes");
         }
     }
     
