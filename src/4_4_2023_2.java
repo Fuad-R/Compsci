@@ -12,7 +12,7 @@ class Test10{
     double absences = scanner.nextInt();
 
     if (absences > classes){
-        System.out.println("Error in absences");;
+        System.out.println("Error in absences");
     }
     else {
     double percent = (absences/classes * 100);
