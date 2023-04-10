@@ -13,7 +13,7 @@ class Test12{
 
     }
     else {
-    System.out.println("It is not a leap year");
+    System.out.println(year+ " is not a leap year");
     }   
     scanner.close();
     }
