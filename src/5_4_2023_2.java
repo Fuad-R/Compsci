@@ -12,16 +12,16 @@ class Test13{
     int y = scanner.nextInt();
 
     if (x > 0 && y > 0) {
-        System.out.println("It is in Quadrant 1");
+        System.out.println("("+x+","+y+")"+" is in quadrant 1");
     }
     else if (x > 0 && y < 0) {
-        System.out.println("It is in Quadrant 4");
+        System.out.println("("+x+","+y+")"+" is in quadrant 4");
     }
     else if (x < 0 && y < 0) {
-        System.out.println("It is in Quadrant 3");
+        System.out.println("("+x+","+y+")"+" is in quadrant 3");
     }
     else {
-        System.out.println("It is in Quadrant 2");
+        System.out.println("("+x+","+y+")"+" is in quadrant 2");
     }
     scanner.close();
 
