@@ -9,7 +9,7 @@ class Test12{
     int year = scanner.nextInt();
 
     if (year % 4 == 0) {
-    System.out.println("It is a leap year");
+    System.out.println(year+ " is a leap year");
 
     }
     else {
