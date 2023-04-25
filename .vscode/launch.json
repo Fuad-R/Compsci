@@ -6,10 +6,59 @@
     "configurations": [
         {
             "type": "java",
+<<<<<<< HEAD
             "name": "Test3",
             "request": "launch",
             "mainClass": "Test3",
             "projectName": "Compsci_37318e49"
+=======
+            "name": "Test22",
+            "request": "launch",
+            "mainClass": "Test22",
+            "projectName": "Compsci_dbe9d038"
+        },
+        {
+            "type": "java",
+            "name": "Test21",
+            "request": "launch",
+            "mainClass": "Test21",
+            "projectName": "Compsci_dbe9d038"
+        },
+        {
+            "type": "java",
+            "name": "Test20",
+            "request": "launch",
+            "mainClass": "Test20",
+            "projectName": "Compsci_dbe9d038"
+        },
+        {
+            "type": "java",
+            "name": "Test19",
+            "request": "launch",
+            "mainClass": "Test19",
+            "projectName": "Compsci_dbe9d038"
+        },
+        {
+            "type": "java",
+            "name": "Test18",
+            "request": "launch",
+            "mainClass": "Test18",
+            "projectName": "Compsci_dbe9d038"
+        },
+        {
+            "type": "java",
+            "name": "Test16",
+            "request": "launch",
+            "mainClass": "Test16",
+            "projectName": "Compsci_dbe9d038"
+        },
+        {
+            "type": "java",
+            "name": "Test14",
+            "request": "launch",
+            "mainClass": "Test14",
+            "projectName": "Compsci_dbe9d038"
+>>>>>>> 2ad78c2560380221735ebccb8a60fbda0a9de0ed
         },
         {
             "type": "java",
