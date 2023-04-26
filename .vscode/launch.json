@@ -6,6 +6,7 @@
     "configurations": [
         {
             "type": "java",
+<<<<<<< HEAD
             "name": "Test24",
             "request": "launch",
             "mainClass": "Test24",
@@ -20,6 +21,14 @@
         },
         {
             "type": "java",
+=======
+<<<<<<< HEAD
+            "name": "Test3",
+            "request": "launch",
+            "mainClass": "Test3",
+            "projectName": "Compsci_37318e49"
+=======
+>>>>>>> 074dc9bb58897e89463932d070e691e7480245e2
             "name": "Test22",
             "request": "launch",
             "mainClass": "Test22",
@@ -66,6 +75,7 @@
             "request": "launch",
             "mainClass": "Test14",
             "projectName": "Compsci_dbe9d038"
+>>>>>>> 2ad78c2560380221735ebccb8a60fbda0a9de0ed
         },
         {
             "type": "java",
