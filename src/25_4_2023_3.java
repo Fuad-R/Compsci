@@ -8,11 +8,9 @@ class Test22{
     System.out.print("Enter number of rows for the triangle: ");
     int rows = scanner.nextInt();
 
-    int c = 0;
-    int i = 0;
-    for (c = 0 ; c<rows ; c++){
+    for (int c = 0 ; c<rows ; c++){
         
-        for (i = 0 ; i < (c+1) ; i++){
+        for (int i = 0 ; i < (c+1) ; i++){
         System.out.print("*");
         }
 
