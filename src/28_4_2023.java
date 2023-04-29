@@ -1,6 +1,5 @@
 import java.util.Scanner;
 import java.text.DecimalFormat;
-import java.math.RoundingMode;
 
 class Test25{
     public static void main(String[]arg)
@@ -47,10 +46,10 @@ class Test25{
        
     }
         
-    System.out.println("The class average is "+(sum/x)+" and the maximum grade is "+max);
+    // System.out.println("The class average is "+(sum/x)+" and the maximum grade is "+max);
  
-    System.out.println();
-
+    // System.out.println();
+// 
 // final Object[][] table = new String[x][];
 //     for(int i=0 ; i < x ; i++){
         
