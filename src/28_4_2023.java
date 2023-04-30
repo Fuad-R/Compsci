@@ -64,19 +64,26 @@ class Test25{
     
     String l = "--------------------------------%n";
 
+
+System.out.printf(l);
+    System.out.printf("|         Class Results        |%n");
     System.out.printf(l);
+    System.out.printf("| %-13s | %-12s |%n", "   Average", "   Highest");
+    System.out.printf("| %-3s %-9s | %-4s %-7s |%n","", df.format((sum/x)),"", max);
+    System.out.printf(l);
+
+
     System.out.printf("|       Student results        |%n");
     System.out.printf(l);
     
 
     for(int n = 0; n < x ; n++ ){
-        System.out.printf("| %-10s | %-6s | %-7s |%n", student[n], gradeString[n], passfail[n]);
+        System.out.printf("| %-10s | %-1s %-4s | %-7s |%n", student[n],"", gradeString[n], passfail[n]);
     }
+    System.out.printf(l);
+    
     scanner.close();
-    System.out.printf(l);
-    System.out.printf("|         Class Results        |%n");
-    System.out.printf("| %-8s | %-3s | %-3s | %-3s |%n", "Average", df.format((sum/x)), "Max", max);
-    System.out.printf(l);
+    
 
 }
 
