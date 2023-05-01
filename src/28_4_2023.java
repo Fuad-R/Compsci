@@ -4,6 +4,9 @@ import java.text.DecimalFormat;
 class Test25{
     public static void main(String[]arg)
 {
+    System.out.print("\033[H\033[2J");  
+    System.out.flush();  
+
     Scanner scanner = new Scanner(System.in);
     DecimalFormat df = new DecimalFormat("0.00");
 
