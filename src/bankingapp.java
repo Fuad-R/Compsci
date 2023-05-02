@@ -15,7 +15,9 @@ public class bankingapp{
 
     System.out.println("Welcome to the banking app");
     System.out.println("Would you like to login or register?");
-    
+    System.out.println();
+    System.out.println("1 - Login");
+    System.out.println("2 - Register");
 
     String loginOrRegister = scanner.next();
 
@@ -27,7 +29,7 @@ public class bankingapp{
         // }
 
     switch(loginOrRegister){
-        case "login":
+        case "1":
             System.out.println("Please enter your username");
             String inputusername = scanner.next();
             System.out.println("Please enter your password");
@@ -35,10 +37,15 @@ public class bankingapp{
 
             for (int i = 1; i < 50; i=i+2) {
                 line = bufferedReader.readLine();
+
                 if (line.equals(inputusername)){
+
                     System.out.println("Username found");
+
                     for (int j=2; j<50; j=j+2){
+
                         line = bufferedReader.readLine();
+
                         if (line.equals(inputpassword)){
                             System.out.println("Login successful");
                         }
@@ -53,7 +60,7 @@ public class bankingapp{
             }
             break;
             
-        case "register":
+        case "2":
 
             String logincount = bufferedReader.readLine();
             int lc = Integer.parseInt(logincount);
@@ -68,7 +75,7 @@ public class bankingapp{
             System.out.println("Please enter your password");
             String password = scanner.next();
 
-           
+            writer.write(username);
 
             break;
 

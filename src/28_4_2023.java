@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.text.DecimalFormat;
 
-class Test25{
+class Test26{
     public static void main(String[]arg)
 {
     System.out.print("\033[H\033[2J");  
