@@ -3,15 +3,26 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
 
-public class bankingapp{
+public class Bankingapp{
     public static void main(String[]arg) throws IOException
 {
     Scanner scanner = new Scanner(System.in);
-   
-    FileReader reader = new FileReader("src/logins.txt");
+    String logins = "src/logins.txt";
+    Boolean loggedin = false;
+
+    File file2 = new File("balances.txt");
+    File file = new File(logins);
+    FileReader reader = new FileReader(logins);
     BufferedReader bufferedReader = new BufferedReader(reader);
-    FileWriter writer = new FileWriter("src/logins.txt", true);
+    FileWriter writer = new FileWriter(logins, true);
+    Scanner fileScanner = new Scanner(file);
+
+    Scanner balscanner = new Scanner(file2); 
+    FileWriter balwriter = new FileWriter("balances.txt");
 
     System.out.println("Welcome to the banking app");
     System.out.println("Would you like to login or register?");
@@ -19,74 +30,113 @@ public class bankingapp{
     System.out.println("1 - Login");
     System.out.println("2 - Register");
 
-    String loginOrRegister = scanner.next();
-
-    String line;
- 
-        // for (int i = 0; i < 5; i++) {
-        //     line = bufferedReader.readLine();
-        //     System.out.println(line);
-        // }
+    int loginOrRegister = scanner.nextInt();
+    
+    while (loggedin == false){
 
     switch(loginOrRegister){
-        case "1":
-            System.out.println("Please enter your username");
-            String inputusername = scanner.next();
-            System.out.println("Please enter your password");
-            String inputpassword = scanner.next();
+        case 1:
+            
+        System.out.print("Enter username: ");
+        String inputusername = scanner.next();
 
-            for (int i = 1; i < 50; i=i+2) {
-                line = bufferedReader.readLine();
+        System.out.println();
 
-                if (line.equals(inputusername)){
-
-                    System.out.println("Username found");
-
-                    for (int j=2; j<50; j=j+2){
-
-                        line = bufferedReader.readLine();
-
-                        if (line.equals(inputpassword)){
-                            System.out.println("Login successful");
-                        }
-                        else{
-                            System.out.println("Incorrect password");
-                        }
-                    }
-                }
-                else{
-                    System.out.println("Username not found");
+        System.out.print("Enter password: ");
+        String inputpassword = scanner.next();
+        try {
+            boolean accessGranted = false;
+            while (fileScanner.hasNextLine()) {
+                String storedUsername = fileScanner.nextLine();
+                String storedPassword = fileScanner.nextLine();
+                if (inputusername.equals(storedUsername) && inputpassword.equals(storedPassword)) {
+                    accessGranted = true;
+                    break;
                 }
             }
+            if (accessGranted) {
+                System.out.println("Access granted.");
+                loggedin = true;
+            } else {
+                System.out.println("Access denied.");
+            }
+        } catch (Exception e) {
+            System.out.println("An error occurred, please try again.");
+            }
             break;
-            
-        case "2":
+//! nice
+        case 2:
 
-            String logincount = bufferedReader.readLine();
-            int lc = Integer.parseInt(logincount);
-            lc = lc+1;
-            logincount = Integer.toString(lc);
+        System.out.print("Enter username: ");
+        String username = scanner.next();
 
-            writer.write(System.getProperty("line.separator"));
-            writer.write(logincount);
+        System.out.println();
 
-            System.out.println("Please enter your username");
-            String username = scanner.next();
-            System.out.println("Please enter your password");
-            String password = scanner.next();
+        System.out.print("Enter password: ");
+        String password = scanner.next();
 
-            writer.write(username);
+        try {
 
+        writer.write(username + "\n" + password + "\n");
+        writer.close();
+
+        System.out.println("Credentials saved to file.");
+        loggedin = true;
+
+        } catch (IOException e) {
+
+        System.out.println("An error occurred.");
+        e.printStackTrace();
+        }
+        
             break;
+
+        default:
+        System.out.println("Invalid action");
 
     }
-    
+    }
+
+    Map<String, Double> accounts = new HashMap<>();
+        try {
+            while (balscanner.hasNextLine()) {
+                String line = balscanner.nextLine();
+                String[] parts = line.split(",");
+                String username = parts[0];
+                double balance = Double.parseDouble(parts[1]);
+                accounts.put(username, balance);
+            }
+        } catch (Exception e) {
+            System.out.println("An error occurred, please try again.");
+            }
+        // catch (FileNotFoundException e) {
+        //     System.out.println("An error occurred.");
+        //     e.printStackTrace();
+        // }
+
+        // Update account balances
+        //accounts.put("NAME", VALUE);
+
+        // Write updated account balances to file
+        try {
+            for (Map.Entry<String, Double> entry : accounts.entrySet()) {
+                balwriter.write(entry.getKey() + "," + entry.getValue() + "\n");
+            }
+            writer.close();
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+
 
     scanner.close();
     reader.close();
     writer.close();
     bufferedReader.close();
-    
-    }
-}
+    fileScanner.close();
+    balscanner.close();
+    balwriter.close();
 
+    }
+    
+}
