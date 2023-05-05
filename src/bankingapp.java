@@ -14,7 +14,7 @@ public class Bankingapp{
     String logins = "src/logins.txt";
     Boolean loggedin = false;
 
-    File file2 = new File("balances.txt");
+    File file2 = new File("src/balances.txt");
     File file = new File(logins);
     FileReader reader = new FileReader(logins);
     BufferedReader bufferedReader = new BufferedReader(reader);
@@ -64,9 +64,9 @@ public class Bankingapp{
             System.out.println("An error occurred, please try again.");
             }
             break;
-//! nice
-        case 2:
 
+        case 2:
+//! nice
         System.out.print("Enter username: ");
         String username = scanner.next();
 
@@ -117,14 +117,13 @@ public class Bankingapp{
         // Update account balances
         //accounts.put("NAME", VALUE);
 
-        // Write updated account balances to file
         try {
             for (Map.Entry<String, Double> entry : accounts.entrySet()) {
                 balwriter.write(entry.getKey() + "," + entry.getValue() + "\n");
             }
             writer.close();
         } catch (IOException e) {
-            System.out.println("An error occurred.");
+            System.out.println("An error occurred updating your balance.");
             e.printStackTrace();
         }
 
