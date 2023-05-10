@@ -66,7 +66,7 @@ public class Bankingapp{
             break;
 
         case 2:
-//! nice
+
         System.out.print("Enter username: ");
         String username = scanner.next();
 
@@ -97,6 +97,8 @@ public class Bankingapp{
     }
     }
 
+    //! VVV Balance tracking VVV
+
     Map<String, Double> accounts = new HashMap<>();
         try {
             while (balscanner.hasNextLine()) {
@@ -115,7 +117,8 @@ public class Bankingapp{
         // }
 
         // Update account balances
-        //accounts.put("NAME", VALUE);
+        
+    //accounts.put("NAME", VALUE);
 
         try {
             for (Map.Entry<String, Double> entry : accounts.entrySet()) {
