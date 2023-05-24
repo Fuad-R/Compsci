@@ -1,3 +1,4 @@
+
 public class Circle {
     
     private double radius;
@@ -7,7 +8,10 @@ public class Circle {
     }
 
     public double getarea() {
-        double area = 3.14*(radius*radius);
-        return area;
+        return 3.14*(radius*radius);
     }
+    public double getperimiter() {
+        return 2*3.14*radius;
+    }
+
 }

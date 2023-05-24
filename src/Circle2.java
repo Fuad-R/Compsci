@@ -1,3 +1,4 @@
+
 public abstract class Circle2 {
  
     private String color;

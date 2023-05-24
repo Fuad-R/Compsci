@@ -9,7 +9,9 @@ public class Rectangle extends Shape {
         this.width = height;
     }
     public double getarea() {
-        double area = height*width;
-        return area;
+        return height*width;
+    }
+    public double getperimiter() {
+        return 2*(height+width);
     }
 }
